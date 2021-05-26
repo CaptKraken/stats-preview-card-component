@@ -30,7 +30,7 @@ $clr-slightly-transparent-white6 : hsla(0, 0%, 100%, 0.6);
 }
 
 body{
-    font-size: 15px;
+    font-size: 0.9375rem; //15px;
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
     @include flexCenter();
@@ -52,13 +52,12 @@ body{
 
 .card{
     background: $clr-dark-desaturated-blue;
-    border-radius: 10px;
+    border-radius: 0.625rem; //10px;
     overflow: hidden;
     margin: 3.5rem 0;
     text-align: center;
 
-    max-width: 450px;
-
+    max-width: 28.125rem; //450px;
     &__image{
         position: relative;
         &--decoy{
@@ -88,7 +87,7 @@ body{
         margin-top: 1rem;
         color:$clr-slightly-transparent-white75;
         line-height: 1.7;
-        font-size: 16px;
+        font-size: 1rem; //16px;
     }
 
     &__stats{
@@ -103,7 +102,7 @@ body{
             margin-top: .5rem;
             color: $clr-slightly-transparent-white6;
             text-transform: uppercase;
-            font-size: 12px;
+            font-size: 0.75rem; //12px;
             letter-spacing: 1.5px;
         }
     }
@@ -111,18 +110,19 @@ body{
 
 }
 
-@media only screen and (min-width: 1024px){
+// 1024px
+@media only screen and (min-width: 64rem){
     .card{
         display: flex;
         flex-direction: row-reverse;
-        max-width: 1080px;
+        max-width: 67.5rem; //1080px;
         text-align: left;
-        align-items: center;
+        align-items: center
         &__heading{
-            font-size: 42px;
+            font-size: 2.625rem; //42px;
         }
         &__text{
-            font-size: 18px;
+            font-size: 1.125rem; //18px;
         }
 
         &__image{
@@ -157,7 +157,8 @@ body{
 
 }
 
-@media only screen and (max-width: 300px){
+// 300px
+@media only screen and (max-width: 18.75rem){
     .container{
     padding: unset;
     }
