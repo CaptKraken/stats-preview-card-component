@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+
+// (main background)
+$clr-very-dark-blue: hsl(233, 47%, 7%);
+// (card background)
+$clr-dark-desaturated-blue: hsl(244, 38%, 16%);
+// (accent)
+$clr-soft-violet: hsl(277, 64%, 61%);
+// (main heading, stats)
+$clr-white: hsl(0, 0%, 100%);
+// (main paragraph)
+$clr-slightly-transparent-white75 : hsla(0, 0%, 100%, 0.75);
+// (stat headings)
+$clr-slightly-transparent-white6 : hsla(0, 0%, 100%, 0.6);
+
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    @include flexCenter();
+    color:$clr-white;
+}
+.purple{
+    color: $clr-soft-violet;
+}
+
+.container{
+    @include flexCenter();
+    background: $clr-very-dark-blue;
+    padding: 1.5rem;
+    min-width: 100vw;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+.card{
+    background: $clr-dark-desaturated-blue;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 3.5rem 0;
+    text-align: center;
+
+    max-width: 450px;
+
+    &__image{
+        position: relative;
+        &--decoy{
+            opacity: 0;
+            max-height: 12rem;
+        }
+        &--overlay{
+            position: absolute;
+            background-color: rgba($clr-soft-violet,.9);
+            background-image: url(../images/image-header-mobile.jpg);
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+        }
+    }
+    &__content{
+        padding: 2.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__text{
+        margin-top: 1rem;
+        color:$clr-slightly-transparent-white75;
+        line-height: 1.7;
+        font-size: 16px;
+    }
+
+    &__stats{
+        margin: 2rem 2rem 0;
+        
+    }
+    &__stat{
+        &:not(:first-child){
+            margin-top: 1.5rem;
+        }
+        &--text{
+            margin-top: .5rem;
+            color: $clr-slightly-transparent-white6;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+        }
+    }
+
+
+}
+
+@media only screen and (min-width: 1024px){
+    .card{
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 1080px;
+        text-align: left;
+        align-items: center;
+        &__heading{
+            font-size: 42px;
+        }
+        &__text{
+            font-size: 18px;
+        }
+
+        &__image{
+            position: relative;
+            flex: 100%;
+            height: 30rem;
+            &--decoy{
+                height: 100%;
+            }
+            &--overlay{
+                background-image: url(../images/image-header-desktop.jpg);
+            }
+        }
+
+        &__stats{
+            display: flex;
+            margin: 5rem 0 0;
+        }
+
+        &__content{
+            padding: 2.8rem 3rem;
+            flex: 100%;
+        }
+    &__stat{
+        &:not(:first-child){
+            margin-top: unset;
+            margin-left: 5rem;
+            
+        }
+    }
+    }
+
+}
+
+@media only screen and (max-width: 300px){
+    .container{
+    padding: unset;
+    }
+    .card{
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    // only looks okay until 280px then it breaks again @260px, but im not fixing that lol
+}
