@@ -117,9 +117,10 @@ body{
         flex-direction: row-reverse;
         max-width: 67.5rem; //1080px;
         text-align: left;
-        align-items: center
+        align-items: center;
+
         &__heading{
-            font-size: 2.625rem; //42px;
+            font-size:2.625rem; //42px;
         }
         &__text{
             font-size: 1.125rem; //18px;
@@ -146,13 +147,13 @@ body{
             padding: 2.8rem 3rem;
             flex: 100%;
         }
-    &__stat{
-        &:not(:first-child){
-            margin-top: unset;
-            margin-left: 5rem;
+        &__stat{
+            &:not(:first-child){
+                margin-top: unset;
+                margin-left: 5rem;
             
+            }
         }
-    }
     }
 
 }

@@ -32,23 +32,20 @@ Your users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://captkraken.github.io/stats-preview-card-component/)
 
 ## My process
+in this challenge, i chose the mobile-first route. im getting the hang of it now. i used flexbox for the layout. 
 
+i encountered a problem with the image – beign it changes the image for mobile and desktop. the solution i came up with was to create a decoy image and put the opacity to 0. then i created a div with the class overlay where i change the background image based on the view port. that seems to solve the problem.
+
+before coming to that solution, however, i thought of putting two images then hide one for different viewports, but it would be unnecessary to download the desktop version when it's open from a mobile device.
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [CaptKraken](https://github.com/CaptKraken)
+- Frontend Mentor - [@CaptKraken](https://www.frontendmentor.io/profile/CaptKraken)

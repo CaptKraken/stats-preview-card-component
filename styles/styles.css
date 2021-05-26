@@ -125,10 +125,12 @@ body {
             flex-direction: row-reverse;
     max-width: 67.5rem;
     text-align: left;
-    -webkit-box-align: center .card __heading;
-        -ms-flex-align: center .card __heading;
-            align-items: center .card __heading;
-    align-items-font-size: 2.625rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card__heading {
+    font-size: 2.625rem;
   }
   .card__text {
     font-size: 1.125rem;
