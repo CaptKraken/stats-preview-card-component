@@ -31,8 +31,8 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://captkraken.github.io/stats-preview-card-component/)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/statspreviewcardcomponent-html-scss-flexbox-mobile-first-VUoFOtf3s)
+- Live Site URL: [DEMO](https://captkraken.github.io/stats-preview-card-component/)
 
 ## My process
 in this challenge, i chose the mobile-first route. im getting the hang of it now. i used flexbox for the layout. 
